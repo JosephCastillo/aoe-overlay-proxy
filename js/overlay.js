@@ -49,7 +49,7 @@ function conectar() {
         return;
     }
 
-    const socket = new WebSocket("wss://aoe2recs.com/dashboard/api/");
+    const socket = new WebSocket("wss://aoe-overlay-proxy-vl.vercel.app/api/ws-proxy");
 
     socket.onopen = () => {
         if (statusEl) statusEl.textContent = "🔍 Conectado, enviando suscripción...";
@@ -619,4 +619,5 @@ function getCivIconUrl(civilizationName) {
     console.log("Civ icon file name:", fileName);
     return `https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/refs/heads/master/img/Civs/${fileName}.png`;
 }
+
 
